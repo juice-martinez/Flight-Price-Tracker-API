@@ -16,13 +16,20 @@ if sheet_data[0]["iataCode"] == "":
     data_manager.update_destination_codes()
     sheet_data = data_manager.get_destination_data()
 
+destinations = {
+    data["iataCode"]: {
+        "id": data["id"],
+        "city": data["city"],
+        "price": data["lowestPrice"]
+    } for data in sheet_data}
+
 tomorrow = datetime.now() + timedelta(days=1)
 six_month_from_today = datetime.now() + timedelta(days=(6 * 30))
 
-for destination in sheet_data:
+for destination_code in destinations:
     flight = flight_search.check_flights(
         ORIGIN_CITY_IATA,
-        destination["iataCode"],
+        destination_code,
         from_time=tomorrow,
         to_time=six_month_from_today
     )
