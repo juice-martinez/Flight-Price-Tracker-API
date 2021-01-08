@@ -8,7 +8,7 @@ check flights from any airport that you live near.
 #### 3. AWS account - https://aws.amazon.com/
 
 ### Usage
-#### Create a Google sheet:
+#### 1. Create a Google sheet:
 In the Google sheet create three columns. First one, 
 City - for the cities you would like to visit. Second, 
 IATA Code - you can leave this one blank (the app will 
@@ -17,14 +17,14 @@ indicating the lowest price that you would pay for the flight
 
 ![alt text](https://github.com/dockingtheclouds/Flight-Price-Tracker-API/blob/main/GoogleSheet.png?raw=true)
 
-#### Create SHEETY ENDPOINT for you google sheet
+#### 2. Create SHEETY ENDPOINT for you google sheet
 Enter the endpoint where needed
 
-#### Create API key for Kiwi
+#### 3. Create API key for Kiwi
 Enter your Kiwi api key where needed
 
-#### Airport and Phone number
+#### 4. Airport and Phone number
 Enter the airport IATA code that you want to leave from
 and then enter your phone number where needed 
 
-#### Run app 
+#### 5. Run app 
