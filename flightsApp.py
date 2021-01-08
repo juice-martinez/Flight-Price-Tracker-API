@@ -11,10 +11,10 @@ notification_manager = NotificationManager()
 ORIGIN_CITY_IATA = "DFW"
 
 if sheet_data[0]["iataCode"] == "":
-    for row in sheet_data:
-        row["iataCode"] = flight_search.get_destination_code(row["city"])
-    data_manager.destination_data = sheet_data
+    city_names = [row["city"] for row in sheet_data]
+    data_manager.city_codes = flight_search.get_destination_code(city_names)
     data_manager.update_destination_codes()
+    sheet_data = data_manager.get_destination_data()
 
 tomorrow = datetime.now() + timedelta(days=1)
 six_month_from_today = datetime.now() + timedelta(days=(6 * 30))
