@@ -25,12 +25,12 @@ class FlightSearch:
             "fly_to": destination_city_code,
             "date_from": from_time.strftime("%d/%m/%Y"),
             "date_to": to_time.strftime("%d/%m/%Y"),
-            "nights_in_dst_from": 7,
+            "nights_in_dst_from": 4,
             "nights_in_dst_to": 28,
             "flight_type": "round",
             "one_for_city": 1,
             "max_stopovers": 0,
-            "curr": "GBP"
+            "curr": "USD"
         }
 
         response = requests.get(
