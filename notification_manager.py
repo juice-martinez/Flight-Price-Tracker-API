@@ -8,6 +8,6 @@ class NotificationManager:
 
     def send_sms(self, message):
         self.client.publish(
-            PhoneNumber="+19566394847",
+            PhoneNumber="YOUR_PHONE_NUMBER",
             Message=message
         )
