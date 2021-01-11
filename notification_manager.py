@@ -8,6 +8,6 @@ class NotificationManager:
 
     def send_sms(self, message):
         self.client.publish(
-            PhoneNumber="YOUR_PHONE_NUMBER_HERE",
+            PhoneNumber= "YOUR_PHONE_NUMBER_HERE",
             Message=message
         )
