@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from data_manager import DataManager
 from flight_search import FlightSearch
 from notification_manager import NotificationManager
+import os
 
 data_manager = DataManager()
 sheet_data = data_manager.get_destination_data()
